@@ -19,7 +19,7 @@ jobs:
       - name: Build
         working-directory: ./
         run: |
-          make -f Makefile
+          make -f Makefile -k
       - name: Zip
         working-directory: ./
         run: |
