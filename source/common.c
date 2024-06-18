@@ -798,18 +798,6 @@ char *COM_SkipPath (char *pathname)
 
 /*
 ============
-COM_StripExtension
-============
-*/
-void COM_StripExtension (char *in, char *out)
-{
-	while (*in && *in != '.')
-		*out++ = *in++;
-	*out = 0;
-}
-
-/*
-============
 COM_FileExtension
 ============
 */
@@ -828,6 +816,19 @@ char *COM_FileExtension (char *in)
 	exten[i] = 0;
 	return exten;
 }
+
+/*
+============
+COM_StripExtension
+============
+*/
+void COM_StripExtension (char *in, char *out)
+{
+	while (*in && *in != '.')
+		*out++ = *in++;
+	*out = 0;
+}
+
 
 /*
 ============
@@ -1430,7 +1431,6 @@ void COM_CloseFile (int h)
 			
 	Sys_FileClose (h);
 }
-
 
 /*
 ============
