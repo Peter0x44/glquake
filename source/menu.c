@@ -24,6 +24,8 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #include "winquake.h"
 #endif
 
+#include "common.h"
+
 extern cvar_t	r_wateralpha;
 extern cvar_t	r_vsync;
 extern cvar_t	in_disable_analog;
@@ -978,7 +980,7 @@ void Map_Finder(void)
 		}
 
 		if(!strcmp(COM_FileExtension(dp->d_name),"bsp")|| !strcmp(COM_FileExtension(dp->d_name),"BSP"))
-	    {
+		{
 			char ntype[32];
 
 			COM_StripExtension(dp->d_name, ntype);
