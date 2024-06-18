@@ -331,6 +331,16 @@ static void M_Paused_Menu_Draw ()
 		Draw_ColoredString(10, 175, "Main Menu", 255, 255, 255, 255, 1);
 }
 
+void M_Menu_Restart_f (void)
+{
+	wasInMenus = (key_dest == key_menu_pause);
+	key_dest = key_menu_pause;
+	m_state = m_restart;
+	m_entersound = true;
+}
+
+
+
 static void M_Paused_Menu_Key (int key)
 {
 	switch (key)
@@ -591,15 +601,6 @@ char *restartMessage [] =
   "                               ",
   "   A :Yes    B : No       "
 };
-
-
-void M_Menu_Restart_f (void)
-{
-	wasInMenus = (key_dest == key_menu_pause);
-	key_dest = key_menu_pause;
-	m_state = m_restart;
-	m_entersound = true;
-}
 
 
 void M_Restart_Key (int key)
