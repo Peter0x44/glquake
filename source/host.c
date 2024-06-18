@@ -86,7 +86,7 @@ Max_Fps_f -- ericw
 static void Max_Fps_f (cvar_t *var)
 {
 	if (var->value > 72)
-		Con_Warning ("host_maxfps above 72 breaks physics.\n");
+		Con_Print ("host_maxfps above 72 breaks physics.\n");
 }
 
 /*
