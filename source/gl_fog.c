@@ -220,7 +220,7 @@ void Fog_ParseWorldspawn (void)
 		return; // error
 	while (1)
 	{
-		data = COM_Parse(data);
+		data = COM_Parse((char*)data);
 		if (!data)
 			return; // error
 		if (com_token[0] == '}')
@@ -231,7 +231,7 @@ void Fog_ParseWorldspawn (void)
 			strcpy(key, com_token);
 		while (key[strlen(key)-1] == ' ') // remove trailing spaces
 			key[strlen(key)-1] = 0;
-		data = COM_Parse(data);
+		data = COM_Parse((char*)data);
 		if (!data)
 			return; // error
 		strcpy(value, com_token);
