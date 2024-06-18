@@ -1915,6 +1915,8 @@ void Mod_LoadAliasModel (model_t *mod, void *buffer)
 	//
 	// build the draw lists
 	//
+	// From gl_mesh.c
+	void GL_MakeAliasModelDisplayLists (model_t *m, aliashdr_t *hdr);
 	GL_MakeAliasModelDisplayLists (mod, pheader);
 
 //
