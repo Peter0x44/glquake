@@ -747,7 +747,7 @@ reenter:
 	t2 = DoublePrecisionDotProduct (trace->plane.normal, ctx->end) - trace->plane.dist;
 	midf = (t1 - DIST_EPSILON) / (t1 - t2);
 
-	midf = CLAMP(0, midf, 1);
+	midf = CLAMP(0.0f, midf, 1.0f);
 	trace->fraction = midf;
 	VectorCopy (mid, trace->endpos);
 	VectorInterpolate(ctx->start, midf, ctx->end, trace->endpos);
