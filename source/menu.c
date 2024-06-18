@@ -331,6 +331,8 @@ static void M_Paused_Menu_Draw ()
 		Draw_ColoredString(10, 175, "Main Menu", 255, 255, 255, 255, 1);
 }
 
+qboolean wasInMenus;
+
 void M_Menu_Restart_f (void)
 {
 	wasInMenus = (key_dest == key_menu_pause);
@@ -597,7 +599,6 @@ void M_Credits_Key (int key)
 //=============================================================================
 /* RESTART MENU */
 
-qboolean	wasInMenus;
 
 
 char *restartMessage [] =
