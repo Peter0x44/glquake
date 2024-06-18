@@ -2602,6 +2602,9 @@ void QMB_ShamblerCharge (vec3_t org)
 	}
 }
 
+// From cl_main.c
+void CL_NewDlight (int key, vec3_t origin, float radius, float time, int type);
+
 void QMB_LaserSight (void)
 {
 	float		frametime	= fabs(cl.time - cl.oldtime);
