@@ -161,7 +161,7 @@ WAV loading
 */
 
 
-byte	*data_p;
+char	*data_p;
 byte 	*iff_end;
 byte 	*last_chunk;
 byte 	*iff_data;
