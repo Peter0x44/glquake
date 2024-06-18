@@ -1218,6 +1218,8 @@ double		achievement_time;
 float smallsec;
 int ach_pic;
 
+void Draw_AlphaPic (int x, int y, qpic_t *pic, float alpha);
+
 void HUD_Achievement (void)
 {
 
