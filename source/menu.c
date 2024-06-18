@@ -339,6 +339,13 @@ void M_Menu_Restart_f (void)
 	m_entersound = true;
 }
 
+void M_Menu_Exit_f (void)
+{
+	wasInMenus = (key_dest == key_menu_pause);
+	key_dest = key_menu_pause;
+	m_state = m_exit;
+	m_entersound = true;
+}
 
 
 static void M_Paused_Menu_Key (int key)
@@ -661,15 +668,6 @@ char *exitMessage [] =
   "                                  ",
   "   A :Yes    B : No       "
 };
-
-
-void M_Menu_Exit_f (void)
-{
-	wasInMenus = (key_dest == key_menu_pause);
-	key_dest = key_menu_pause;
-	m_state = m_exit;
-	m_entersound = true;
-}
 
 
 void M_Exit_Key (int key)
