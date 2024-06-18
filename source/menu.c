@@ -242,6 +242,19 @@ void M_Load_Menu_Pics ()
 
 int m_save_demonum;
 
+int M_Paused_Cusor;
+#define Max_Paused_Iteams 5
+
+void M_Paused_Menu_f ()
+{
+	key_dest = key_menu_pause;
+	m_state = m_paused_menu;
+	m_entersound = true;
+	loadingScreen = 0;
+	loadscreeninit = false;
+	M_Paused_Cusor = 0;
+}
+
 /*
 ================
 M_ToggleMenu_f
@@ -276,19 +289,6 @@ void M_ToggleMenu_f (void)
 	}
 }
 
-
-int M_Paused_Cusor;
-#define Max_Paused_Iteams 5
-
-void M_Paused_Menu_f ()
-{
-	key_dest = key_menu_pause;
-	m_state = m_paused_menu;
-	m_entersound = true;
-	loadingScreen = 0;
-	loadscreeninit = false;
-	M_Paused_Cusor = 0;
-}
 
 static void M_Paused_Menu_Draw ()
 {
