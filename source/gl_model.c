@@ -836,6 +836,9 @@ void CalcSurfaceExtents (msurface_t *s)
 }
 
 
+// from gl_warp.c
+void GL_SubdivideSurface (msurface_t *fa);
+
 /*
 =================
 Mod_LoadFaces
