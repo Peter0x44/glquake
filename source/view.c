@@ -122,7 +122,7 @@ float V_CalcBob (float speed,float which)//0 = regular, 1 = side bobbing
 	float sprint = 1;
 
 	if (cl.stats[STAT_ZOOM] == 2)
-		return;
+		return 0;
 
 	// Bob idle-y, instead of presenting as if in-motion.
 	if (speed < 0.1) {
