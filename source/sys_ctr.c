@@ -24,6 +24,9 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 #include <3ds.h>
 
+#include <sys/stat.h>
+#include <unistd.h>
+
 #define TICKS_PER_SEC 268123480.0
 
 int __stacksize__ = 4 * 1024 * 1024; 
