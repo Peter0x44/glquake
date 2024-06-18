@@ -31,26 +31,6 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #include <3ds.h>
 #include <sys/fcntl.h>
 
-inline uint32_t htonl(uint32_t hostshort)
-{
-	return __builtin_bswap32(hostshort);
-}
-
-inline uint16_t htons(uint16_t hostshort)
-{
-	return __builtin_bswap16(hostshort);
-}
-
-inline uint32_t ntohl(uint32_t netlong)
-{
-	return __builtin_bswap32(netlong);
-}
-
-inline uint16_t ntohs(uint16_t netshort)
-{
-	return __builtin_bswap16(netshort);
-}
-
 #define SOC_BUFFERSIZE  0x100000
 #define SOC_ALIGN       0x1000
 
