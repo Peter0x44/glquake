@@ -956,7 +956,7 @@ char* remove_windows_newlines(const char* line)
 void Map_Finder(void)
 {
 	struct dirent *dp;
-    DIR *dir = opendir(va("%s/maps", com_gamedir)); // Open the directory - dir contains a pointer to manage the dir
+	DIR *dir = opendir(va("%s/maps", com_gamedir)); // Open the directory - dir contains a pointer to manage the dir
 
 	if(dir < 0)
 	{
@@ -968,7 +968,7 @@ void Map_Finder(void)
 		custom_maps[i].occupied = false;
 	}
 	
-	while(dp=readdir(dir))
+	while((dp=readdir(dir)))
 	{
 		
 		if(dp->d_name[0] == '.')
