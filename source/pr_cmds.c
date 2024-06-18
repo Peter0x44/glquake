@@ -3245,7 +3245,7 @@ songegg(trackname)
 */
 void PF_SongEgg (void)
 {
-	char trackname;
+	char *trackname;
 	
 	trackname = G_STRING(OFS_PARM0);
 
