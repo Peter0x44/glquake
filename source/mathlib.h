@@ -18,6 +18,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 */
 // mathlib.h
+#include <math.h>
 
 typedef float vec_t;
 typedef vec_t vec3_t[3];
@@ -35,9 +36,8 @@ typedef	int	fixed16_t;
 struct mplane_s;
 
 extern vec3_t vec3_origin;
-extern	int nanmask;
 
-#define	IS_NAN(x) (((*(int *)&x)&nanmask)==nanmask)
+//#define	IS_NAN(x) (((*(int *)&x)&nanmask)==nanmask)
 
 #define Q_rint(x) ((x) > 0 ? (int)((x) + 0.5) : (int)((x) - 0.5)) //johnfitz -- from joequake
 
